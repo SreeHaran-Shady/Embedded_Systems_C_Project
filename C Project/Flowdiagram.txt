@@ -1,0 +1,63 @@
+ MAIN FLOW:
+
+                ┌────────────┐
+                │   START    │
+                └─────┬──────┘
+                      │
+                ┌─────▼──────┐
+                │  Show Menu │
+                └─────┬──────┘
+                      │
+                ┌─────▼──────┐
+                │ User Input │
+                └─────┬──────┘
+                      │
+             ┌────────┼─────────┬──────────┬──────────┐
+             │        │         │          │          │
+             ▼        ▼         ▼          ▼          ▼
+            Case 1   Case 2    Case 3     Case 4    Default
+            Display  Book      Cancel     Exit      Invalid
+            Seats    Ticket    Ticket     System    Choice
+
+
+CASE 2: Book Ticket (Expanded):
+
+                    Book Ticket
+                        │
+                        ▼
+                    Enter Passenger Details
+                        │
+                        ▼
+                    Select Bus Type
+                        │
+                        ▼
+                    Show Seat Layout
+                        │
+                        ▼
+                    Enter Seat Row & Col
+                        │
+                    ┌───▼─────────────┐
+                    │ Is Seat Free?   │───────┐
+                    └──┬──────────────┘       │
+                       │YES                   │NO
+                       ▼                      ▼
+                    Mark Seat Booked       Show Error
+                    Store Passenger
+                    Print Ticket
+
+
+CASE 3: Cancel Ticket:
+
+                    Cancel Ticket
+                        │
+                        ▼
+                    Enter Passenger Name
+                        │
+                    ┌───▼─────────────┐
+                    │ Found in List?  │───────┐
+                    └──┬──────────────┘       │
+                       │YES                   │NO
+                       ▼                      ▼
+                    Free Seat              Show Error
+                    Remove Passenger
+
